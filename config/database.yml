@@ -37,8 +37,8 @@ production:
   reconnect: false
   database: sharebelt_production
   pool: 5
-  username: root
-  password:
+  username: sharebelt_dba
+  password: sharebelt1!
   socket: /tmp/mysql.sock
 
 cucumber:
