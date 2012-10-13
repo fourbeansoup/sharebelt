@@ -17,3 +17,4 @@
 # Vendor Everything
 /bin/
 /vendor/ruby/
+*.DS_Store
