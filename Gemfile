@@ -39,6 +39,7 @@ group :development do
   gem 'foreman'
   gem 'capistrano-deploy', :require => false
   gem 'capistrano-campfire', :require => false
+  gem 'pry'
 end
 
 group :development, :test do

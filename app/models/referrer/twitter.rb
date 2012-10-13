@@ -1,4 +1,4 @@
-class Referrer::Twitter
+class Referrer::Twitter < Referrer
   def css_class
     "twitter"
   end
