@@ -38,6 +38,7 @@ group :development do
   gem 'heroku'
   gem 'foreman'
   gem 'capistrano-deploy', :require => false
+  gem 'capistrano-campfire', :require => false
 end
 
 group :development, :test do
