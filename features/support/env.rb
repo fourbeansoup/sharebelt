@@ -12,6 +12,26 @@ require 'cucumber/rails'
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
 
+OmniAuth.config.test_mode = true
+OmniAuth.config.add_mock(:twitter, {
+  :uid => '12345',
+  :info => {
+    :nickname => 'fooman'
+  },
+  :user_info => {
+    :first_name => 'Foo',
+    :last_name => 'Man'
+  },
+  :credentials => {
+    :token => ""
+  },
+  :extra => {
+    :raw_info => {
+      :email => ""
+    }
+  }
+})
+
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 
 # your application behaves in the production environment, where an error page will 
