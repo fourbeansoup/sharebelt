@@ -8,3 +8,5 @@ script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate
   - RAILS_ENV=test bundle exec rake --trace db:test:prepare
   - RAILS_ENV=test bundle exec rake --trace
+notifications:
+  campfire: sharebelt:d54ab05b956b82cab28cb9f4d34c665dda32680d@536534
