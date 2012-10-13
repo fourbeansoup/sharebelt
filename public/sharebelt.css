@@ -1,0 +1,35 @@
+#sharebelt-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+  overflow: visible;
+  padding: 0;
+  position: fixed !important;
+  display: block;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 5000;
+}
+
+.sharebelt {
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+.general {
+  background-color: red;
+}
+
+.twitter {
+  background-color: blue;
+}
+
