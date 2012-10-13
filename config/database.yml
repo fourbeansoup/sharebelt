@@ -39,7 +39,7 @@ production:
   pool: 5
   username: sharebelt_dba
   password: sharebelt1!
-  socket: /tmp/mysql.sock
+  host: localhost
 
 cucumber:
   <<: *test
