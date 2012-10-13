@@ -8,7 +8,7 @@
 
   buildUri = function() {
     var domain, referrer;
-    domain = "localhost:3000";
+    domain = "sharebelt.com";
     referrer = strip_protocol(document.referrer);
     return ("http://" + domain + "/impressions?referrer=") + referrer + "&jsonp=loadResponse";
   };

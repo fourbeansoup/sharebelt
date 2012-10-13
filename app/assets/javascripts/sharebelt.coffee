@@ -2,7 +2,7 @@ loadResponse = (data) ->
   data
 
 buildUri = -> 
-  domain = "localhost:3000" 
+  domain = "sharebelt.com" 
   referrer = strip_protocol(document.referrer) 
   "http://#{domain}/impressions?referrer=" + referrer + "&jsonp=loadResponse"
 
