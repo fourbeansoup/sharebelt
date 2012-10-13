@@ -1,3 +1,5 @@
 - flash.each do |level, message|
-  = content_tag(:div, message, class: "flash #{message}")
+  %div.flash.alert-box{:class => level}
+    = message
+    %a.close &times;
 
