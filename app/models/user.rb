@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include Clearance::User
-  has_many :authenications, :dependent => :destroy
+  has_many :authentications, :dependent => :destroy
 
   def self.create_with_auth_and_hash(authentication,auth_hash)
     create! do |u|
