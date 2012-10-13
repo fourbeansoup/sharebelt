@@ -30,6 +30,9 @@ gem 'haml-rails'
 gem 'high_voltage', ">= 1.2.0"
 gem 'rdiscount'
 gem 'unicorn'
+gem 'clearance'
+gem 'omniauth'
+gem 'omniauth-twitter'
 
 group :development do
   gem 'heroku'
