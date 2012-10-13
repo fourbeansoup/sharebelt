@@ -1,17 +1,18 @@
 class Referrer
-  attr_accessor :domain
+  attr_accessor :referring, :sharing
 
-  def initialize(domain)
-    @domain = domain.blank? ? "none" : domain
+  def initialize(referring,sharing)
+    @referring = referring.blank? ? "" : referring
+    @sharing = sharing.blank? ? "" : sharing
   end
 
-  def self.for(domain)
-    if domain =~ /t\.co/
-      Referrer::Twitter.new(domain)
-    elsif domain =~ /facebook/
-      Referrer::Facebook.new(domain)
+  def self.for(referring,sharing)
+    if referring =~ /t\.co/
+      Referrer::Twitter.new(referring,sharing)
+    elsif referring =~ /facebook/
+      Referrer::Facebook.new(referring,sharing)
     else
-      Referrer::Direct.new(domain)
+      Referrer::Facebook.new(referring,sharing)
     end
   end
 

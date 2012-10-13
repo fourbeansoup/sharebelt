@@ -8,7 +8,7 @@ class Referrer::Facebook < Referrer
   end
 
   def html
-    "<div id='fb-root'></div><div class='fb-like' data-href='HTTP://REPLACETHIS.COM' data-send='true' data-width='450' data-show-faces='true'></div>".html_safe
+    "<div id='fb-root'></div><div class='fb-like' data-href='#{sharing}' data-send='true' data-width='450' data-show-faces='true'></div>".html_safe
   end
 end
 

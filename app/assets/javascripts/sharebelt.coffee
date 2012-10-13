@@ -7,7 +7,8 @@ buildUri = ->
   domain = "sharebelt.com" 
   #domain = "localhost:3000" 
   referrer = strip_protocol(document.referrer) 
-  "http://#{domain}/impressions?referrer=" + referrer + "&jsonp=loadResponse"
+  location = document.location.href
+  "http://#{domain}/impressions?referrer=" + referrer + "&location=" + location + "&jsonp=loadResponse"
 
 injectScript = -> 
 

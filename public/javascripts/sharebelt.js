@@ -10,10 +10,11 @@
   };
 
   buildUri = function() {
-    var domain, referrer;
+    var domain, location, referrer;
     domain = "sharebelt.com";
     referrer = strip_protocol(document.referrer);
-    return ("http://" + domain + "/impressions?referrer=") + referrer + "&jsonp=loadResponse";
+    location = document.location.href;
+    return ("http://" + domain + "/impressions?referrer=") + referrer + "&location=" + location + "&jsonp=loadResponse";
   };
 
   injectScript = function() {
