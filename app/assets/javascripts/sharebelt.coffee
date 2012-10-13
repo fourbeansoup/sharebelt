@@ -1,5 +1,6 @@
 window.loadResponse = (data) ->
-  eval(data.js)
+  belt = document.getElementById("sharebelt") 
+  belt.innerHTML = data.html
 
 buildUri = -> 
   domain = "sharebelt.com" 

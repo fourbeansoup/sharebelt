@@ -3,7 +3,9 @@
   var buildUri, injectScript, strip_protocol;
 
   window.loadResponse = function(data) {
-    return eval(data.js);
+    var belt;
+    belt = document.getElementById("sharebelt");
+    return belt.innerHTML = data.html;
   };
 
   buildUri = function() {
