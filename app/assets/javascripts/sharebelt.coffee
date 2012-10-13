@@ -1,5 +1,5 @@
-loadResponse = (data) ->
-  data
+window.loadResponse = (data) ->
+  eval(data.js)
 
 buildUri = -> 
   domain = "sharebelt.com" 
