@@ -26,7 +26,7 @@ class SitesController < ApplicationController
   # GET /sites/new
   # GET /sites/new.json
   def new
-    @site = Site.new
+    @site = current_user.sites.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,11 +42,11 @@ class SitesController < ApplicationController
   # POST /sites
   # POST /sites.json
   def create
-    @site = Site.new(params[:site])
+    @site = current_user.sites.create(params[:site])
 
     respond_to do |format|
       if @site.save
-        format.html { redirect_to @site, notice: 'Site was successfully created.' }
+        format.html { redirect_to @site, notice: 'We added #{@site.name}.' }
         format.json { render json: @site, status: :created, location: @site }
       else
         format.html { render action: "new" }
@@ -58,7 +58,7 @@ class SitesController < ApplicationController
   # PUT /sites/1
   # PUT /sites/1.json
   def update
-    @site = Site.find(params[:id])
+    @site = current_user.sites.find(params[:id])
 
     respond_to do |format|
       if @site.update_attributes(params[:site])
