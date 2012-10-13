@@ -3,7 +3,11 @@ class Referrer::Direct < Referrer
     "direct"
   end
 
-  def html_content
+  def script
+    ""
+  end
+
+  def html
     "Direct"
   end
 end
