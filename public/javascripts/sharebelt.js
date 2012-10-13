@@ -14,7 +14,11 @@
     domain = "sharebelt.com";
     referrer = strip_protocol(document.referrer);
     location = document.location.href;
-    return ("http://" + domain + "/impressions?referrer=") + referrer + "&location=" + location + "&jsonp=loadResponse";
+    if (referrer) {
+      return ("http://" + domain + "/impressions?referrer=") + referrer + "&location=" + location + "&jsonp=loadResponse";
+    } else {
+      return "";
+    }
   };
 
   injectScript = function() {

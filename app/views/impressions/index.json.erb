@@ -1,1 +1,3 @@
-<%= params[:jsonp] %>({script: "<%= @referrer.script %>", html: "<style>@import url('http://<%= @domain %>/sharebelt.css')</style><div class='sharebelt <%= @referrer.css_class %>'><%= @referrer.html %></div>"})
+<% if @referrer %>
+  <%= params[:jsonp] %>({script: "<%= @referrer.script %>", html: "<style>@import url('http://<%= @domain %>/sharebelt.css')</style><div class='sharebelt <%= @referrer.css_class %>'><%= @referrer.html %></div>"})
+<% end >

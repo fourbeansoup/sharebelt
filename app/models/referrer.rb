@@ -11,8 +11,6 @@ class Referrer
       Referrer::Twitter.new(referring,sharing)
     elsif referring =~ /facebook/
       Referrer::Facebook.new(referring,sharing)
-    else
-      Referrer::Facebook.new(referring,sharing)
     end
   end
 

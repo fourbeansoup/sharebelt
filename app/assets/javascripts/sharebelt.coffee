@@ -8,7 +8,8 @@ buildUri = ->
   #domain = "localhost:3000" 
   referrer = strip_protocol(document.referrer) 
   location = document.location.href
-  "http://#{domain}/impressions?referrer=" + referrer + "&location=" + location + "&jsonp=loadResponse"
+  if referrer then "http://#{domain}/impressions?referrer=" + referrer + "&location=" + location + "&jsonp=loadResponse" else ""
+    
 
 injectScript = -> 
 
