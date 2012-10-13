@@ -20,6 +20,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.9'
+  gem 'therubyracer', :platforms => :ruby
 
 end
 
@@ -28,11 +29,12 @@ gem 'thin'
 gem 'haml-rails'
 gem 'high_voltage', ">= 1.2.0"
 gem 'rdiscount'
-gem 'airbrake'
+gem 'unicorn'
 
 group :development do
   gem 'heroku'
   gem 'foreman'
+  gem 'capistrano-deploy', :require => false
 end
 
 group :development, :test do
