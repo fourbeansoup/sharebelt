@@ -20,7 +20,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.9'
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer'
 
 end
 
