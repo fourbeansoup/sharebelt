@@ -7,7 +7,7 @@
     %title= content_for?(:title) ? yield(:title) : "Untitled"
     = stylesheet_link_tag    "application"
     = csrf_meta_tags
-  %body
+  %body{:class => [ params[:controller], params[:action] ]}
     #wrapper.container
       %header.row
         .columns.twelve
