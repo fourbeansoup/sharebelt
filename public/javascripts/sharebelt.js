@@ -4,7 +4,7 @@
 
   window.loadResponse = function(data) {
     var belt;
-    belt = document.getElementById("sharebelt");
+    belt = document.getElementById("sharebelt-wrapper");
     return belt.innerHTML = data.html;
   };
 

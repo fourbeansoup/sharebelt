@@ -1,5 +1,5 @@
 window.loadResponse = (data) ->
-  belt = document.getElementById("sharebelt") 
+  belt = document.getElementById("sharebelt-wrapper") 
   belt.innerHTML = data.html
 
 buildUri = -> 
