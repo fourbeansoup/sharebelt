@@ -17,7 +17,7 @@ class SessionsController < Clearance::SessionsController
     end
     session[:auth_id] = authentication.id
     sign_in(user)
-    redirect_to root_url, :notice => @notice
+    redirect_to sites_url, :notice => @notice
   end
 
 end

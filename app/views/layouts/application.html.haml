@@ -11,7 +11,10 @@
     #wrapper.container
       %header.row
         .columns.twelve
-          %h1 Header
+          .columns.eight
+            %h1 Header
+          .columsn.four
+            = render 'application/user_bar'
       #main.row
         .columns.twelve
           = render 'application/flashes'
