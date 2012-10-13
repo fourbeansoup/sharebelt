@@ -6,7 +6,7 @@ class Referrer
   end
 
   def self.for(domain)
-    if domain =~ /tco/
+    if domain =~ /t\.co/
       Referrer::Twitter.new(domain)
     else
       Referrer::Direct.new(domain)
