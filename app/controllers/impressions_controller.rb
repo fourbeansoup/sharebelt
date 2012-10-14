@@ -9,6 +9,10 @@ class ImpressionsController < ApplicationController
     @impression = @site.impressions.create(referring_url: params[:referrer], landing_url: params[:location])
   end
 
+  def click
+    @impression = @site.impressions.find(params[:id]).click!
+  end
+
   protected
 
   def find_site
