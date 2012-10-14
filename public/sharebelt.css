@@ -2,14 +2,13 @@
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
-  overflow: visible;
+  margin: 0 auto;
+  overflow: hidden;
   padding: 0;
   position: fixed !important;
   display: block;
   width: 100%;
   bottom: 0;
-  left: 0;
   z-index: 9999;
 }
 
