@@ -4,7 +4,17 @@ class Referrer::Facebook < Referrer
   end
 
   def script
-    "(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/all.js#xfbml=1&appId=292279370880643';fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));".html_safe
+    code = <<-eos
+      (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = '//connect.facebook.net/en_US/all.js#xfbml=1&appId=292279370880643';
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    eos
+    prepare_code(code)
   end
 
   def html
