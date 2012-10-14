@@ -1,3 +1,8 @@
+%script{:type => "text/javascript"}
+  window.onload = function () {
+  jQuery.get("http://localhost:3000/reports/#{@site.id}", function(data) { window.reportData = data })
+  }
+
 %h2
   Settings for
   = @site.name

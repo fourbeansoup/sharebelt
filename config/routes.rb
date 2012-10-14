@@ -1,5 +1,7 @@
 Sharebelt::Application.routes.draw do
 
+  resources :reports
+
   resources :sites do
     resources :impressions do
       member do
