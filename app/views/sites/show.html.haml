@@ -1,6 +1,6 @@
 :javascript
   window.onload = function () {
-    jQuery.get("http://localhost:3000/reports/#{@site.id}", function(data) { renderGraph(data) })
+    jQuery.get("http://sharebar.com/reports/#{@site.id}", function(data) { renderGraph(data) })
 
     renderGraph = function(data) {
       nv.addGraph(function() {
