@@ -14,4 +14,8 @@ class Referrer
     end
   end
 
+  def prepare_code(code)
+    code.gsub(/\n\s*/," ").html_safe
+  end
+
 end

@@ -7,9 +7,10 @@ class window.ShareBeltInjector
     belt.className += "visible"
 
   buildUri: (d) -> 
+    referrer = @stripProtocol(d.referrer) 
     domain = "sharebelt.com" 
     #domain = "localhost:3000" 
-    referrer = @stripProtocol(d.referrer) 
+    #referrer = 't.co'
     location = d.location.href
     site_id = d.getElementById('sharebelt-wrapper').getAttribute('data-site')
     if referrer then "http://#{domain}/sites/#{site_id}/impressions?referrer=" + referrer + "&location=" + location + "&jsonp=loadResponse" else ""
