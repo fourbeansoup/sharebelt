@@ -2,7 +2,9 @@ Sharebelt::Application.routes.draw do
 
   resources :sites do
     resources :impressions do
-      member :click
+      member do
+        get 'click'
+      end
     end
   end
 
