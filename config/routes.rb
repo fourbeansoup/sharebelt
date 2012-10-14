@@ -1,7 +1,9 @@
 Sharebelt::Application.routes.draw do
 
   resources :sites do
-    resources :impressions
+    resources :impressions do
+      member :click
+    end
   end
 
   match "/auth/:provider/callback" => "sessions#create_from_omniauth"
