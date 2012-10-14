@@ -1,19 +1,21 @@
-%h1 Your sites
+%h2 Your sites
 
-%table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
+.sites_list.twelve.columns
+  - @sites.each_with_index do |site,index|
+    %div{class: ("row" if index.to_i.even?)}
+      .site.panel.radius.six.columns
+        %h3= site.name
+        %ul
+          %li
+            = link_to site do
+              %span.icon-bar-chart
+          %li
+            = link_to edit_site_path(site) do
+              %span.icon-pencil
 
-  - @sites.each do |site|
-    %tr
-      %td= site.name
-      %td= link_to 'Show', site
-      %td= link_to 'Edit', edit_site_path(site)
-      %td= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' }
+          %li
+            = link_to(site, method: :delete, confirm: 'Are you sure?') do
+              %span.icon-remove
 
-%br
-
-= link_to 'Add a site', new_site_path
+  .row
+    = link_to 'Add a site', new_site_path, :class => "button"
