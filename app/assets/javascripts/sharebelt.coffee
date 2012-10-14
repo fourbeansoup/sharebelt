@@ -4,6 +4,7 @@ class window.ShareBeltInjector
     eval(data.script)
     belt = document.getElementById("sharebelt-wrapper") 
     belt.innerHTML = data.html
+    belt.className += "visible"
 
   buildUri: (d) -> 
     domain = "sharebelt.com" 

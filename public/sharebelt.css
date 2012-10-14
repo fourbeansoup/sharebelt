@@ -10,8 +10,16 @@
   width: 100%;
   top: 100%;
   z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
+.visible {
+  opacity: 1 !important;
+}
 .sharebelt {
   height: 60px;
   line-height: 30px;
