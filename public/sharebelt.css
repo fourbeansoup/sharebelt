@@ -37,8 +37,16 @@
 .direct {
 }
 
-.twitter {
+.sharebelt.twitter {
+	background: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	height: 44px;
+	padding: 15px;
 }
+
 
 .facebook {
 }
