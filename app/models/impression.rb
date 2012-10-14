@@ -3,6 +3,8 @@ class Impression < ActiveRecord::Base
   belongs_to :landing_url
   belongs_to :referring_url
 
+  attr_accessible :site, :landing_url, :referring_url
+
   before_create :set_timestamps
 
   def landing_url=(url)
