@@ -5,6 +5,7 @@ class window.ShareBeltInjector
     belt = document.getElementById("sharebelt-wrapper") 
     belt.innerHTML = data.html
     belt.className += "visible"
+    belt.className += "top"
     window.shareBeltSiteId = data.site
     window.shareBeltImpressionId = data.impression
 
