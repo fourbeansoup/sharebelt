@@ -2,19 +2,26 @@
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: -60px auto 0 auto;
   overflow: hidden;
   padding: 0;
   position: fixed !important;
   display: block;
   width: 100%;
-  top: 100%;
   z-index: 9999;
   opacity: 0;
   -webkit-transition: opacity 2s ease 1s;
   -moz-transition: opacity 2s ease 1s;
   -o-transition: opacity 2s ease 1s;
   transition: opacity 2s ease 1s;
+}
+
+.top {
+  top: 0
+}
+
+.bottom {
+  top: 100%;
+  margin: -60px auto 0 auto;
 }
 
 .visible {
