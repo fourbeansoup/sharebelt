@@ -8,11 +8,12 @@ buildUri = ->
   #domain = "localhost:3000" 
   referrer = strip_protocol(document.referrer) 
   location = document.location.href
-  if referrer then "http://#{domain}/impressions?referrer=" + referrer + "&location=" + location + "&jsonp=loadResponse" else ""
+  referrer = 't.co'
+  site_id = document.getElementById('sharebelt-wrapper').getAttribute('data-site')
+  if referrer then "http://#{domain}/sites/#{site_id}/impressions?referrer=" + referrer + "&location=" + location + "&jsonp=loadResponse" else ""
     
 
 injectScript = -> 
-
   script = document.createElement("script")
   script.setAttribute("src", buildUri())
   document.head.appendChild(script)
