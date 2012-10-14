@@ -11,6 +11,7 @@ class ImpressionsController < ApplicationController
 
   def click
     @impression = @site.impressions.find(params[:id]).click!
+    render :nothing => true
   end
 
   protected
