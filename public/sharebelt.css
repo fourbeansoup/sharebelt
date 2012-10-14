@@ -57,3 +57,7 @@
   height: 70px;
   color: white;
 }
+
+.facebook iframe .uiIconText {
+  color: white !important;
+}
