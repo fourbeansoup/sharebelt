@@ -8,13 +8,13 @@
   position: fixed !important;
   display: block;
   width: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: 5000;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .sharebelt {
-  height: 30px;
+  height: 60px;
   line-height: 30px;
   margin: 0;
   overflow: visible;
@@ -22,17 +22,15 @@
   position: relative;
   text-align: center;
   width: 100%;
-  z-index: 1000;
+  z-index: 9998;
+  background-color: black;
 }
 
 .direct {
-  background-color: red;
 }
 
 .twitter {
-  background-color: blue;
 }
 
 .facebook {
-  background-color: purple;
 }
