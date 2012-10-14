@@ -14,11 +14,15 @@ class Referrer::Facebook < Referrer
         });
 
         FB.Event.subscribe('edge.create',
-          captureLike(response)
+          function(response) {
+            captureLike(response);
+          }
         );
 
         FB.Event.subscribe('message.send',
-          captureShare(response)
+          function(response) {
+            captureShare(response);
+          }
         );
 
         function captureLike(response) {
