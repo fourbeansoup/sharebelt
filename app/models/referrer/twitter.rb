@@ -32,7 +32,7 @@ class Referrer::Twitter < Referrer
       }
 
       function makeCaptureCall(share_type) {
-        var route = "site/" + window.shareBeltSiteId + "/impressions/" + window.shareBeltImpressionId + "/click?network=twitter&type=" + share_type;
+        var route = "sites/" + window.shareBeltSiteId + "/impressions/" + window.shareBeltImpressionId + "/click?network=twitter&type=" + share_type;
         var uri = "http://#{ENV["DOMAIN"]}/" + route;
         var script = document.createElement("script");
         script.setAttribute("src", uri);
