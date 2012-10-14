@@ -11,6 +11,33 @@ class Referrer::Twitter < Referrer
         js.src='//platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs);
         return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
       }(document, 'script', 'twitter-wjs'));
+
+      function makeCaptureCall(route_target) {
+        var route = "site/" + window.shareBeltSiteId + "/twitter/" + route_target;
+        var uri = "http://#{ENV["DOMAIN"]}/" + route;
+        var script = document.createElement("script");
+        script.setAttribute("src", uri);
+        document.head.appendChild(script);
+      }
+
+      function captureClick(intent_event) {
+        if (intent_event) {
+          var route_target = "tweets";
+          makeCaptureCall(route_target);
+        };
+      }
+
+      function captureTweet(intent_event) {
+        if (intent_event) {
+          var route_target = "clicks";
+          makeCaptureCall(route_target);
+        };
+      }
+
+      twttr.ready(function (twttr) {
+        twttr.events.bind('click', captureClick);
+        twttr.events.bind('tweet', captureTweet);
+      });
     eos
     prepare_code(code)
   end

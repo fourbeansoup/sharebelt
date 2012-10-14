@@ -5,6 +5,7 @@ class window.ShareBeltInjector
     belt = document.getElementById("sharebelt-wrapper") 
     belt.innerHTML = data.html
     belt.className += "visible"
+    window.shareBeltSiteId = data.site
 
   buildUri: (d) -> 
     referrer = @stripProtocol(d.referrer) 
