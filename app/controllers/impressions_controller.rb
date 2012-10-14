@@ -6,7 +6,7 @@ class ImpressionsController < ApplicationController
   def index
     @domain = Rails.env == "development" ? "localhost:3000" : "sharebelt.com"
     @referrer = Referrer.for(params[:referrer],params[:location])
-    @site.impressions.create
+    @site.impressions.create(referring_url: params[:referrer], landing_url: params[:location])
   end
 
   protected
