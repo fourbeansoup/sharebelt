@@ -12,13 +12,10 @@ class Referrer::Twitter < Referrer
         return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
       }(document, 'script', 'twitter-wjs'));
 
-      function makeCaptureCall(route_target) {
-        var route = "site/" + window.shareBeltSiteId + "/twitter/" + route_target;
-        var uri = "http://#{ENV["DOMAIN"]}/" + route;
-        var script = document.createElement("script");
-        script.setAttribute("src", uri);
-        document.head.appendChild(script);
-      }
+      twttr.ready(function (twttr) {
+        twttr.events.bind('click', captureClick);
+        twttr.events.bind('tweet', captureTweet);
+      });
 
       function captureClick(intent_event) {
         if (intent_event) {
@@ -34,10 +31,13 @@ class Referrer::Twitter < Referrer
         };
       }
 
-      twttr.ready(function (twttr) {
-        twttr.events.bind('click', captureClick);
-        twttr.events.bind('tweet', captureTweet);
-      });
+      function makeCaptureCall(route_target) {
+        var route = "site/" + window.shareBeltSiteId + "/twitter/" + route_target + "?id=" + window.shareBeltImpressionId;
+        var uri = "http://#{ENV["DOMAIN"]}/" + route;
+        var script = document.createElement("script");
+        script.setAttribute("src", uri);
+        document.head.appendChild(script);
+      }
     eos
     prepare_code(code)
   end
