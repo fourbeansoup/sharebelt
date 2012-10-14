@@ -7,6 +7,10 @@ class Impression < ActiveRecord::Base
 
   before_create :set_timestamps
 
+  def click!
+    self.update_attribute(:clicked, true)
+  end
+
   def landing_url=(url)
     matching_landing_url = LandingUrl.find_or_create_by_url(url)
     super(matching_landing_url)

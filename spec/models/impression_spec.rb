@@ -3,6 +3,14 @@ require 'spec_helper'
 describe Impression do
   let(:site) {Site.create(name: "www.test.com")}
 
+  describe "#clicked!" do
+    it "should set clicked to true" do
+      impression = site.impressions.create
+      impression.clicked.should be_false
+      impression.click!
+      impression.reload.clicked.should be_true
+    end
+  end
   describe "creating an impression" do
     it "should set the viewed_at and viewed_on timestamps" do
       impression = site.impressions.new
