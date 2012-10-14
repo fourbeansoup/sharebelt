@@ -37,7 +37,7 @@
   text-align: center;
   width: 100%;
   z-index: 9998;
-  background-color: black;
+	background: rgba(0, 0, 0, 0.9);
   color: white;
 }
 
@@ -45,7 +45,6 @@
 }
 
 .sharebelt.twitter {
-	background: rgba(0, 0, 0, 0.9);
 	width: 100%;
 	color: white;
 	height: 44px;
@@ -54,4 +53,7 @@
 
 
 .facebook {
+  padding-top: 2px
+  height: 70px
+  color: white;
 }
