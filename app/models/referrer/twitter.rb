@@ -19,20 +19,20 @@ class Referrer::Twitter < Referrer
 
       function captureClick(intent_event) {
         if (intent_event) {
-          var route_target = "tweets";
-          makeCaptureCall(route_target);
+          var share_type = "tweet";
+          makeCaptureCall(share_type);
         };
       }
 
       function captureTweet(intent_event) {
         if (intent_event) {
-          var route_target = "clicks";
-          makeCaptureCall(route_target);
+          var share_type = "click";
+          makeCaptureCall(share_type);
         };
       }
 
-      function makeCaptureCall(route_target) {
-        var route = "site/" + window.shareBeltSiteId + "/twitter/" + route_target + "?id=" + window.shareBeltImpressionId;
+      function makeCaptureCall(share_type) {
+        var route = "site/" + window.shareBeltSiteId + "/impressions/" + window.shareBeltImpressionId + "/click?network=twitter&type=" + share_type;
         var uri = "http://#{ENV["DOMAIN"]}/" + route;
         var script = document.createElement("script");
         script.setAttribute("src", uri);

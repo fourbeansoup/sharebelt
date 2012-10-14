@@ -26,17 +26,17 @@ class Referrer::Facebook < Referrer
         );
 
         function captureLike(response) {
-          var route_target = "likes";
-          makeCaptureCall(route_target);
+          var share_type = "like";
+          makeCaptureCall(share_type);
         }
 
         function captureShare(response) {
-          var route_target = "shares";
-          makeCaptureCall(route_target);
+          var share_type = "share";
+          makeCaptureCall(share_type);
         }
 
-        function makeCaptureCall(route_target) {
-          var route = "site/" + window.shareBeltSiteId + "/facebook/" + route_target + "?id=" + window.shareBeltImpressionId;
+        function makeCaptureCall(share_type) {
+          var route = "site/" + window.shareBeltSiteId + "/impressions/" + window.shareBeltImpressionId + "/click?network=facebook&type=" + share_type;
           var uri = "http://#{ENV["DOMAIN"]}/" + route;
           var script = document.createElement("script");
           script.setAttribute("src", uri);
