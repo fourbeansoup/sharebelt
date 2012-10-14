@@ -11,6 +11,6 @@ class ImpressionsController < ApplicationController
   protected
 
   def find_site
-    @site = Site.find(params[:id])
+    @site = Site.find(params[:site_id])
   end
 end
