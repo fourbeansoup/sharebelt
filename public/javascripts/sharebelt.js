@@ -14,7 +14,6 @@
     domain = "sharebelt.com";
     referrer = strip_protocol(document.referrer);
     location = document.location.href;
-    referrer = 't.co';
     site_id = document.getElementById('sharebelt-wrapper').getAttribute('data-site');
     if (referrer) {
       return ("http://" + domain + "/sites/" + site_id + "/impressions?referrer=") + referrer + "&location=" + location + "&jsonp=loadResponse";
