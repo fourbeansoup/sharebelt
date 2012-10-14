@@ -11,10 +11,10 @@
   top: 100%;
   z-index: 9999;
   opacity: 0;
-  -webkit-transition: opacity 2s ease-in-out;
-  -moz-transition: opacity 2s ease-in-out;
-  -o-transition: opacity 2s ease-in-out;
-  transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease 1s;
+  -moz-transition: opacity 2s ease 1s;
+  -o-transition: opacity 2s ease 1s;
+  transition: opacity 2s ease 1s;
 }
 
 .visible {
