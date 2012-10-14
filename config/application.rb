@@ -74,7 +74,7 @@ end
 
     config.assets.initialize_on_precompile = false
 
-    config.assets.precompile += %w(sharebelt.js)
+    config.assets.precompile += %w(sharebelt.js public.css)
 
   end
 end
