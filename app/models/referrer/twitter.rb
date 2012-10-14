@@ -16,7 +16,7 @@ class Referrer::Twitter < Referrer
   end
 
   def html
-    "I see you came from twitter. If you like this, maybe <a href='https://twitter.com/share' class='twitter-share-button' data-url='#{sharing}' data-via='sharebelt' data-size='large' data-count='none'>Tweet</a>?".html_safe
+    "I see you came from twitter. If you like this, <a href='https://twitter.com/share' class='twitter-share-button' data-url='#{sharing}' data-via='sharebelt' data-size='large' data-count='none'>Tweet it</a>?".html_safe
   end
 end
 
