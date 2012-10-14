@@ -33,6 +33,7 @@ gem 'unicorn'
 gem 'clearance'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem "nvd3-rails", :git => "git@github.com:adeven/nvd3-rails.git", :submodules => true
 
 
 group :development do

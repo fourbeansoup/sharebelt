@@ -1,7 +1,45 @@
-%script{:type => "text/javascript"}
+:javascript
   window.onload = function () {
-  jQuery.get("http://localhost:3000/reports/#{@site.id}", function(data) { window.reportData = data })
+    jQuery.get("http://localhost:3000/reports/#{@site.id}", function(data) { renderGraph(data) })
+
+    renderGraph = function(data) {
+      nv.addGraph(function() {
+        var chart = nv.models.multiBarChart();
+        chart.xAxis
+             .tickFormat(function(d) {
+                return d3.time.format('%x')(new Date(d));
+              });
+      
+        chart.yAxis
+             .tickFormat(d3.format(',.1f'));
+
+        d3.select('#chart1 svg')
+          .datum(data)
+          .transition().duration(500).call(chart);
+       
+        nv.utils.windowResize(chart.update);
+       
+        return chart;
+      });
+
+      function exampleData() {
+        return stream_layers(3,10+Math.random()*100,.1).map(function(data, i) {
+          return {
+            key: 'Stream' + i,
+            values: data
+          };
+        });
+      }
+    }
   }
+
+
+%h2
+  Activity for
+  = @site.name
+
+#chart1{:style => "margin-top:50px"}
+  %svg{:style => "height:300px"}
 
 %h2
   Settings for
