@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013141936) do
+ActiveRecord::Schema.define(:version => 20121014022803) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(:version => 20121013141936) do
     t.datetime "updated_at",  :null => false
     t.string   "screen_name"
   end
+
+  create_table "impressions", :force => true do |t|
+    t.integer  "site_id"
+    t.datetime "viewed_at"
+    t.date     "viewed_on"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "impressions", ["site_id"], :name => "index_impressions_on_site_id"
 
   create_table "sites", :force => true do |t|
     t.string   "name"
