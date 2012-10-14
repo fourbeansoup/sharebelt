@@ -18,7 +18,7 @@
 }
 
 .visible {
-  opacity: 1 !important;
+  opacity: 0.9 !important;
 }
 .sharebelt {
   height: 60px;
