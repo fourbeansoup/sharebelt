@@ -11,7 +11,6 @@ Feature:
     And input valid site information
     Then I should see "www.test.com" in my list of sites
 
-  @wip
   Scenario: Only seeing my sites
     Given a site "www.notmysite.com" exists for another user
     When I go to the sites page

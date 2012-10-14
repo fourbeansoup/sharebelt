@@ -3,7 +3,7 @@ When /^I go to add a new site$/ do
 end
 
 When /^input valid site information$/ do
-  fill_in 'Name', :with => "www.test.com"
+  fill_in 'Site Url', :with => "www.test.com"
   click_button "Save"
 end
 
