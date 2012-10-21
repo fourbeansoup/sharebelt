@@ -5,7 +5,7 @@ use_recipes :git, :bundle, :rails, :unicorn, :rails_assets
 server 'sharebelt.com', :web, :app, :db, :primary => true
 set :user, 'deploy'
 set :deploy_to, '/home/deploy/sharebelt/current'
-set :repository, 'git@github.com:railsrumble/r12-team-462.git'
+set :repository, 'git@github.com:fourbeansoup/sharebelt.git'
 
 set :campfire_options, :account => 'sharebelt',
                        :room => 'Coding',
