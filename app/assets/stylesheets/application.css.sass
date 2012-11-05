@@ -1,20 +1,11 @@
-@import foundation_and_overrides
+@import basic-styling
 @import font-awesome
 
-body
-  background-color: darken(#fff, 5)
-  margin-top: 1em
+#main
+  background-color: #fbfbfb
+  border: solid 1px #e6e6e6
+  padding: 20px 0
+  @include border-radius(4px, 4px)
 
-header, #main, footer
-  background-color: #fff
-
-header
-  @include border-radius(5px 5px 0 0)
-
-footer
-  @include border-radius(0 0 5px 5px)
-  p
-    font-size: 80%
-    color: #aaa
 
 @import sites

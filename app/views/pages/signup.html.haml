@@ -30,21 +30,18 @@
             #copy_left
               %h1.tagline_h1 Get your visitors
             #copy_right
-              %h1.tagline_h1 your content, now!
-          #main_button
-            #login
-              = link_to "/auth/twitter" do
-                %span.lob_font get started
-                SIGN UP
-            #signup
-              = link_to "/auth/twitter" do
-                LOG IN
-                %span.lob_font to your account
-          #border
-          #about_us
-            %h2.title_h2 What is Share Belt?
-            %p.main_p
-              Share Belt gets more clicks, views, and subscribers to your site in three powerful ways. First, Share Belt presents your visitors with a single share option, instead of EVERY share option, so sharing is simple. Secondly, your visitor's share option is tailored to them, based on how they came to your site, so sharing makes sense. And third, your visitors are subtly compelled and reminded to share, because Share Belt stays present on the page as they read it.
+              %h1.tagline_h1 your content now!
+            .row
+              #signup.twelve.columns
+                = link_to "Sign up now!", "/auth/twitter", :class => "button orange three radius offset-by-two" 
+                = link_to "Sign in", "/auth/twitter", :class => "button orange three radius offset-by-two"
+                
+          .row
+            .twelve.columns
+              #about_us
+                %h2.title_h2 What is Share Belt?
+                %p.main_p
+                  Share Belt gets more clicks, views, and subscribers to your site in three powerful ways. First, Share Belt presents your visitors with a single share option, instead of EVERY share option, so sharing is simple. Secondly, your visitor's share option is tailored to them, based on how they came to your site, so sharing makes sense. And third, your visitors are subtly compelled and reminded to share, because Share Belt stays present on the page as they read it.
 
       #middle-content{:style => "height:600px;"}
         #middle-content-in
