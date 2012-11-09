@@ -1,3 +1,10 @@
+#close-sharebelt {
+  margin-left: -6px;
+  margin-top: -14px;
+  color: red;
+  float: left;
+}
+
 #sharebelt-wrapper {
   min-height: 100%;
   height: auto !important;
