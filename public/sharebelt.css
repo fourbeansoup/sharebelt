@@ -1,3 +1,13 @@
+#close-sharebelt {
+  margin-left: -6px;
+  margin-top: -18px;
+  color: white;
+  float: left;
+  font-weight: bold;
+  font-family: Helvetica;
+  cursor: hand;
+}
+
 #sharebelt-wrapper {
   min-height: 100%;
   height: auto !important;

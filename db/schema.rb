@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121014184941) do
+ActiveRecord::Schema.define(:version => 20121025024247) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(:version => 20121014184941) do
     t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "shares", :force => true do |t|
+    t.integer  "impression_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "sites", :force => true do |t|

@@ -41,12 +41,12 @@ group :development do
   gem 'foreman'
   gem 'capistrano-deploy', :require => false
   gem 'capistrano-campfire', :require => false
-  gem 'pry'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.9.0'
   gem 'dotenv'
+  gem 'pry'
 end
 
 group :test do
