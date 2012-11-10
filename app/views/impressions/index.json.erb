@@ -1,3 +1,3 @@
 <% if @referrer %>
-  <%= params[:jsonp] %>({impression: <%=  @impression.id %>, site: <%= @site.id %>,script: "<%= @referrer.script %>", html: "<style>@import url('/sharebelt.css')</style><div class='sharebelt <%= @referrer.css_class %>'><%= @referrer.html %><div id='close-sharebelt'>X</div></div>"})
+  <%= params[:jsonp] %>({impression: <%=  @impression.id %>, site: <%= @site.id %>,script: "<%= @referrer.script %>", html: "<style>@import url('/sharebelt.css')</style><div class='sharebelt <%= @referrer.css_class %>'><%= @referrer.html %><a onClick='closeSharebelt()' id='close-sharebelt'>x</a></div>"})
 <% end %>

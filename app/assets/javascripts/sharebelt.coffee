@@ -9,11 +9,15 @@ class window.ShareBeltInjector
     window.shareBeltSiteId = data.site
     window.shareBeltImpressionId = data.impression
 
+  window.closeSharebelt = ->
+    sharebelt = document.getElementById('sharebelt-wrapper')
+    sharebelt.innerHTML = ""
+
   buildUri: (d) -> 
     referrer = @stripProtocol(d.referrer) 
-    domain = "sharebelt.com" 
-    #domain = "localhost:3000"
-    #referrer = "t.co"
+    #domain = "sharebelt.com" 
+    domain = "localhost:3000"
+    referrer = "t.co"
     #referrer = "facebook"
     location = d.location.href
     site_id = d.getElementById('sharebelt-wrapper').getAttribute('data-site')
