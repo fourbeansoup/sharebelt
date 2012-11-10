@@ -15,9 +15,9 @@ class window.ShareBeltInjector
 
   buildUri: (d) -> 
     referrer = @stripProtocol(d.referrer) 
-    #domain = "sharebelt.com" 
-    domain = "localhost:3000"
-    referrer = "t.co"
+    domain = "sharebelt.com" 
+    #domain = "localhost:3000"
+    #referrer = "t.co"
     #referrer = "facebook"
     location = d.location.href
     site_id = d.getElementById('sharebelt-wrapper').getAttribute('data-site')
