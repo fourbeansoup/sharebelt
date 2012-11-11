@@ -2,6 +2,7 @@ class Impression < ActiveRecord::Base
   belongs_to :site
   belongs_to :landing_url
   belongs_to :referring_url
+  has_many :shares
 
   attr_accessible :site, :landing_url, :referring_url
 

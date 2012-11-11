@@ -4,7 +4,6 @@ class ImpressionsController < ApplicationController
   respond_to :json
 
   def index
-    @domain = "sharebelt.com"
     @referrer = Referrer.for(params[:referrer],params[:location])
     @impression = @site.impressions.create(referring_url: params[:referrer], landing_url: params[:location])
   end
